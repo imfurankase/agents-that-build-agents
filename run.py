@@ -44,6 +44,12 @@ MENU = {
     "11a": (L + "11_evals_and_safety/eval_harness.py", "Test an agent with an eval suite"),
     "11b": (L + "11_evals_and_safety/injection_demo.py", "Prompt-injection drill"),
     "12": (L + "12_capstone_agent_foundry/mission.py", "CAPSTONE: full governed mission"),
+    "p1": ("final_project/p1_ask_anything.py", "FINAL PROJECT 1: ask anything (free APIs)"),
+    "p2": ("final_project/p2_my_day.py", "FINAL PROJECT 2: your data, no AI yet"),
+    "p3": ("final_project/p3_briefing.py", "FINAL PROJECT 3: morning briefing"),
+    "p4": ("final_project/p4_chat.py", "FINAL PROJECT 4: chat + reminders"),
+    "p5": ("final_project/p5_telegram_bot.py", "FINAL PROJECT 5: on your phone (Telegram)"),
+    "p6": ("final_project/p6_check_connections.py", "FINAL PROJECT 6: check real calendar/email"),
 }
 
 if len(sys.argv) < 2 or sys.argv[1] not in MENU:

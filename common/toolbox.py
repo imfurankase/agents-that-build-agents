@@ -194,6 +194,26 @@ TOOLBOX: dict[str, Tool] = {
 }
 
 
+# Free public APIs (no key needed) - see common/free_apis.py
+from common import free_apis as _free  # noqa: E402
+
+for _tool in [
+    Tool("get_weather", _free.get_weather.__doc__,
+         _schema({"city": _STR, "days": {"type": "integer"}}, ["city", "days"]),
+         _free.get_weather, "low"),
+    Tool("get_public_holidays", _free.get_public_holidays.__doc__,
+         _schema({"country_code": _STR, "count": {"type": "integer"}}, ["country_code", "count"]),
+         _free.get_public_holidays, "low"),
+    Tool("convert_currency", _free.convert_currency.__doc__,
+         _schema({"amount": {"type": "number"}, "from_currency": _STR, "to_currency": _STR},
+                 ["amount", "from_currency", "to_currency"]),
+         _free.convert_currency, "low"),
+    Tool("wikipedia_summary", _free.wikipedia_summary.__doc__,
+         _schema({"topic": _STR}, ["topic"]), _free.wikipedia_summary, "low"),
+]:
+    TOOLBOX[_tool.name] = _tool
+
+
 def tools_by_name(names: list[str]) -> list[Tool]:
     """Look up tools by name, ignoring names that are not in the toolbox."""
     return [TOOLBOX[n] for n in names if n in TOOLBOX]

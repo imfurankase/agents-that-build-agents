@@ -17,6 +17,7 @@ The learner is a senior leader learning to build AI agents that build and contro
 - `common/` - shared engine: `llm.py` (the agent loop), `governor.py` (controls), `foundry.py` (agents that build agents), `toolbox.py` (tools agents may get), `spec.py` (AgentSpec).
 - `prompts/system/*.md` - system prompts the Python agents load. Edit text here to change behaviour.
 - `agent_registry/` - saved Python agents (JSON). `workspace/` - the ONLY folder Python agents may write to. `logs/` - audit logs.
+- `final_project/` - the learner's end goal: a personal assistant (calendar, email, free APIs, reminders, chat) on their phone via a Telegram bot. Read `final_project/README.md`. It must stay read-only (no send/forward/delete tools).
 - `.claude/agents/` - Claude Code subagents. `.claude/skills/` - slash commands such as `/explain`, `/new-agent`.
 
 ## Running things

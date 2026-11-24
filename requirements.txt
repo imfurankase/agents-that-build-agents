@@ -9,3 +9,7 @@ pydantic>=2.14
 python-dotenv>=1.0
 rich>=13.0
 pytest>=8.0
+# Final project (personal assistant)
+python-telegram-bot[job-queue]>=22.0   # the phone app (Telegram bot)
+icalendar>=6.0                         # read calendar feeds (.ics)
+recurring-ical-events>=3.0             # expand repeating calendar events

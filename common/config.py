@@ -52,6 +52,10 @@ CLAUDE_WORKER_MODEL = _setting("CLAUDE_WORKER_MODEL", "claude-opus-5-5")
 GEMINI_MODEL = _setting("GEMINI_MODEL", "gemini-flash-latest")
 GEMINI_WORKER_MODEL = _setting("GEMINI_WORKER_MODEL", "gemini-flash-latest")
 
+# Your home city / country, used by the weather and holiday tools when no place is given.
+HOME_CITY = _setting("HOME_CITY", "London")
+HOME_COUNTRY_CODE = _setting("HOME_COUNTRY_CODE", "GB")
+
 # Safety limits used by the Governor (lesson 07) unless a script overrides them.
 MAX_USD_PER_RUN = float(_setting("MAX_USD_PER_RUN", "1.00"))
 MAX_AGENTS_PER_RUN = int(_setting("MAX_AGENTS_PER_RUN", "6"))

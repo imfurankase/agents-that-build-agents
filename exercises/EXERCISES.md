@@ -133,3 +133,19 @@ Each exercise has a **Done when** line: that is your success test. Hints: [HINTS
 **E12.4 🟡 Budget experiment.** Run the same goal with two budgets (prompt #110). *Done when:* you have a cost vs quality comparison.
 **E12.5 🔴 Real task.** Run a real task from your work through the Foundry with a tight budget (prompt #111). *Done when:* you have the result, team, cost, audit trail and a "ready for production?" verdict.
 **E12.6 🔴 Present it.** Prepare a 5-minute presentation of E12.5: what the agents built, how they were controlled, what it cost, and what you'd need to scale it. *Done when:* you've delivered it to a colleague and answered their questions.
+
+## Final project: your personal assistant (EP)
+Follow [final_project/README.md](../final_project/README.md). Work in order; each milestone builds on the last.
+
+**EP.1 🟢 Free-API questions.** `/run-lesson p1` with three questions of your own (weather where you'll travel, the next holiday, a currency conversion). *Done when:* you can predict which tools it uses before you press Enter.
+**EP.2 🟡 New free tool.** Ask Claude Code to add a sunrise/sunset tool (Open-Meteo) to `common/free_apis.py`, register it in the toolbox, with an offline sample answer and a test. *Done when:* p1 uses it and `python -m pytest -q` passes.
+**EP.3 🟡 Your sample week.** Make `final_project/sample_data/` look like your real week (fictional but realistic events and emails). *Done when:* `python run.py p2` shows a day that feels like yours.
+**EP.4 🟡 Briefing that fits you.** Run p3, then edit `prompts/system/briefing.md` (e.g. add "3 things only I can do today"). *Done when:* you'd happily read it every morning.
+**EP.5 🟢 Did it catch the traps?** In p3's output, check: the phishing email, the email instructing AI assistants, and the lunch/IT-call clash. *Done when:* all three appear under "Watch out", or you've improved the prompt until they do.
+**EP.6 🟡 Chat and reminders.** In p4, set three reminders in natural language ("in 10 minutes", "tomorrow at 9", "Friday 4pm"). *Done when:* `workspace/assistant/reminders.json` has the right three times.
+**EP.7 🟢 Refusal test.** In p4, ask it to forward, delete or reply to an email. *Done when:* it refuses and offers a draft, and you can explain why it *can't* (no such tools).
+**EP.8 🟡 On your phone.** Complete milestone 5 (BotFather, token, owner id). *Done when:* `/brief` works on your phone and a 2-minute reminder buzzes.
+**EP.9 🟡 Keep it running.** Ask Claude Code to set up a Windows Task Scheduler task that starts the bot at log-in. *Done when:* the bot works after a restart without you starting it.
+**EP.10 🟡 Real calendar.** Add your calendar's secret iCal link to `.env`; run p6, then p2. *Done when:* p6 shows ✅ for the calendar and the briefing uses your real events.
+**EP.11 🔴 Real email (personal account).** Set up read-only IMAP with an app password for a personal or test account; run p6. *Done when:* p6 shows ✅ for email and the inbox stays unread.
+**EP.12 🔴 Extend it.** Add one feature from "Ideas to extend" (e.g. a Friday weekly review, or meeting-prep messages 30 minutes before each meeting), with a test and a safety review (`/review-agent`). *Done when:* it runs on your phone and you can explain its controls.

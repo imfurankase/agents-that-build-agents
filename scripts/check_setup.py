@@ -52,7 +52,8 @@ report(OK if in_venv else WARN, "Running inside a virtual environment" if in_ven
 for package, module in [("anthropic", "anthropic"), ("google-genai", "google.genai"),
                         ("google-adk", "google.adk"), ("claude-agent-sdk", "claude_agent_sdk"),
                         ("mcp", "mcp"), ("pydantic", "pydantic"), ("python-dotenv", "dotenv"),
-                        ("rich", "rich")]:
+                        ("rich", "rich"), ("python-telegram-bot", "telegram"),
+                        ("icalendar", "icalendar"), ("recurring-ical-events", "recurring_ical_events")]:
     try:
         importlib.import_module(module)
         report(OK, f"package {package}")

@@ -173,3 +173,16 @@
 | 85-90 min | **Homework:** one exercise plus the self-check questions |
 
 Tips: let the learner make (safe) mistakes and use **rewind**; keep `LLM_PROVIDER=mock` for the first run of anything new; always finish with `/audit` so reviewing logs becomes a habit.
+
+---
+
+## Weeks 7-9: Final project, your personal assistant
+Follow [final_project/README.md](../final_project/README.md). Suggested pace:
+
+| Week | Milestones | Sessions | Exercises |
+|---|---|---|---|
+| 7 | 1-3: free APIs, your data, morning briefing | `/run-lesson p1`, `p2`, `p3` | EP.1-EP.5 |
+| 8 | 4-5: chat + reminders, then on your phone | `/run-lesson p4`, then set up Telegram and `p5` | EP.6-EP.9 |
+| 9 | 6 + extend: real calendar/email, one new feature | `/run-lesson p6` | EP.10-EP.12 |
+
+**Self-check:** Why is the briefing a workflow but the chat an agent? Which of the "dangerous trio" did we remove, and how? Where does your data go, and what does your organisation's policy say about that?

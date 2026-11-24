@@ -55,3 +55,13 @@ Try first, then peek. Or ask the tutor: *"Use the lesson-tutor to give me the sm
 - **E11.5:** B relies on the model choosing to obey the house rules; C makes the attack impossible (no write tool); D puts a human in the way. Structure beats persuasion.
 - **E12.3:** Compare `verdict.score` and the governor summary (cost) in the two mission records in `workspace/missions/`.
 - **E12.5:** Start with `MAX_USD_PER_RUN=0.50` and `max_agents` 3. Review every proposed agent before approving.
+
+## Final project
+- **EP.2:** Open-Meteo's forecast endpoint has `daily=sunrise,sunset`; copy the pattern of `get_weather`, then add a `Tool(...)` entry in the free-API block of `common/toolbox.py`.
+- **EP.5:** If the clash isn't flagged, add to `briefing.md`: "Compare each event's end time with the next event's start time."
+- **EP.6:** The system prompt gives the model the current date and time; it converts "tomorrow at 9" into `YYYY-MM-DD 09:00` before calling `add_reminder`. Check the audit log to see the exact value.
+- **EP.7:** The assistant only has read tools plus reminders. Safety by *design*: what an agent cannot do, it cannot be tricked into doing.
+- **EP.8:** The bot only answers the id in `TELEGRAM_OWNER_ID`. If it doesn't reply, check the token, restart `p5`, and send `/start` again.
+- **EP.9:** The task should run `.venv\Scripts\pythonw.exe final_project\p5_telegram_bot.py` (pythonw = no console window) with "Start in" set to the repo folder.
+- **EP.10:** If p6 fails, the link is wrong or not public-secret: copy the *secret* iCal address, not the public one.
+- **EP.11:** Gmail app passwords need 2-Step Verification. Work accounts usually block IMAP: use a personal/test account for learning.

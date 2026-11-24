@@ -55,6 +55,7 @@ The Python lessons choose a provider automatically: Claude API key → Gemini ke
 | 10 | [MCP](lessons/10_mcp/) | Plugging agents into tools and data | `agent_registry_server.py` |
 | 11 | [Evals & safety](lessons/11_evals_and_safety/) | Testing agents; prompt injection | `eval_harness.py` |
 | 12 | [**Capstone: Agent Foundry**](lessons/12_capstone_agent_foundry/) | A full governed mission, end to end | `mission.py` |
+| 🎯 | [**Final project: your personal assistant**](final_project/) | Calendar + email + free APIs → morning briefing, reminders and chat **on your phone** (Telegram) | `p5_telegram_bot.py` |
 
 Run any lesson with `python run.py <id>` (e.g. `python run.py 6b`), or in Claude Code: `/run-lesson 6b`.
 

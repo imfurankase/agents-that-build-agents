@@ -1,0 +1,12 @@
+[
+  {"day_offset": 0, "start": "08:30", "end": "09:00", "title": "Daily team check-in", "location": "Room 2", "notes": ""},
+  {"day_offset": 0, "start": "10:00", "end": "11:30", "title": "Budget review with Finance", "location": "Board room", "notes": "Bring Q3 figures; decision on the AI pilot licence"},
+  {"day_offset": 0, "start": "12:30", "end": "13:30", "title": "Lunch with a partner organisation", "location": "City centre", "notes": ""},
+  {"day_offset": 0, "start": "13:30", "end": "14:00", "title": "Call with IT about the AI pilot", "location": "Online", "notes": "Clashes with the end of lunch?"},
+  {"day_offset": 0, "start": "16:00", "end": "17:00", "title": "1:1 with deputy", "location": "My office", "notes": ""},
+  {"day_offset": 1, "start": "08:30", "end": "09:00", "title": "Daily team check-in", "location": "Room 2", "notes": ""},
+  {"day_offset": 1, "start": "09:30", "end": "11:00", "title": "Workshop: AI agents for leadership", "location": "Training centre", "notes": "Laptop needed"},
+  {"day_offset": 1, "start": "15:00", "end": "16:00", "title": "Quarterly risk committee", "location": "Board room", "notes": "Read the risk register before"},
+  {"day_offset": 2, "start": "10:00", "end": "12:00", "title": "Visit from the regional office", "location": "Reception", "notes": ""},
+  {"day_offset": -1, "start": "14:00", "end": "15:00", "title": "Vendor demo", "location": "Online", "notes": ""}
+]
