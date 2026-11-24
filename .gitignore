@@ -1,0 +1,31 @@
+# Secrets - never commit
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Things the agents create while you practise
+workspace/*
+!workspace/README.md
+logs/*
+!logs/.gitkeep
+agent_registry/*.json
+agent_registry/retired/
+!agent_registry/examples/
+STOP
+
+# Claude Code personal settings
+.claude/settings.local.json
+.mcp.json
+
+# Editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json

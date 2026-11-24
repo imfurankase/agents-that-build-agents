@@ -1,0 +1,11 @@
+# Install with:  uv pip install -r requirements.txt
+# (or: python -m pip install -r requirements.txt)
+anthropic>=2.13          # Claude API (optional: needs an API key)
+google-genai>=2.34       # Gemini API (Google AI Studio key - free tier)
+google-adk>=2.15         # Google Agent Development Kit (lesson 09)
+claude-agent-sdk>=0.2.188  # Claude Code as a Python library (lesson 08b)
+mcp>=2.3                 # Model Context Protocol server (lesson 10)
+pydantic>=2.14
+python-dotenv>=1.0
+rich>=13.0
+pytest>=8.0

@@ -1,0 +1,47 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python run.py *)",
+      "Bash(python scripts/check_setup.py*)",
+      "Bash(python -m pytest*)",
+      "Bash(.venv/Scripts/python.exe run.py *)",
+      "Bash(.venv/Scripts/python.exe scripts/check_setup.py*)",
+      "Bash(.venv/Scripts/python.exe -m pytest*)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)"
+    ],
+    "ask": [
+      "Bash(git push*)",
+      "Bash(git commit*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Edit(./.env)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|PowerShell|Write|Edit|MultiEdit|NotebookEdit|Agent|Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard.py\"",
+            "timeout": 15
+          }
+        ]
+      },
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/audit_log.py\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}

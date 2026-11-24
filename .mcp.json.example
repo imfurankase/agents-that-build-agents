@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "agent-registry": {
+      "command": ".venv/Scripts/python.exe",
+      "args": ["lessons/10_mcp/agent_registry_server.py"]
+    }
+  }
+}
