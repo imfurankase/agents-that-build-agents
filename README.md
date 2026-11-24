@@ -81,6 +81,7 @@ Built-in subagents in [.claude/agents/](.claude/agents/): `agent-architect`, `sa
 
 ## Learning materials
 
+- **[docs/Agents_That_Build_Agents_Workbook.pdf](docs/Agents_That_Build_Agents_Workbook.pdf): the Field Guide & Workbook (97 pages).** Module recaps, all 99 exercises with checkboxes, cheat sheets, the prompt library, glossary and a progress tracker. Print it and keep it next to you.
 - [prompts/PROMPTING_GUIDE.md](prompts/PROMPTING_GUIDE.md): how to write prompts for models, agents and Claude Code
 - [prompts/PROMPT_LIBRARY.md](prompts/PROMPT_LIBRARY.md): 100+ copy-paste prompts, by lesson
 - [exercises/EXERCISES.md](exercises/EXERCISES.md): 80+ exercises in three levels; hints in [exercises/HINTS.md](exercises/HINTS.md)
