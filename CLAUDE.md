@@ -21,7 +21,7 @@ The learner is a senior leader learning to build AI agents that build and contro
 - `.claude/agents/` - Claude Code subagents. `.claude/skills/` - slash commands such as `/explain`, `/new-agent`.
 
 ## Running things
-- Python: use the project virtual environment: `.venv\Scripts\python.exe` on Windows (create it with `uv venv` then `uv pip install -r requirements.txt` if missing).
+- Python: use the project virtual environment: `.venv\Scripts\python.exe` on Windows, `.venv/bin/python` on Mac (create it with `uv venv` then `uv pip install -r requirements.txt`, or on a Mac without uv: `python3 -m venv .venv` then `.venv/bin/python -m pip install -r requirements.txt`).
 - Offline, free practice: set `LLM_PROVIDER=mock` in `.env`. Real answers: a `GOOGLE_API_KEY` (free tier) or `ANTHROPIC_API_KEY`.
 - Tests: `python -m pytest -q` (offline, free). Run them after any change to `common/`.
 - Setup check: `python scripts/check_setup.py`.

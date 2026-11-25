@@ -80,16 +80,24 @@ try:
 except Exception as exc:
     report(BAD, f"Could not load settings: {exc}")
 
-# 4. Command-line tools
-for command, why, fix in [
+# 4. Command-line tools (install tips differ on Windows and Mac)
+ON_MAC = sys.platform == "darwin"
+VENV_BIN = pathlib.Path(sys.executable).parent  # tools installed into .venv live here
+for command, why, win_fix, mac_fix in [
     ("claude", "Claude Code CLI (for lesson 01c, 08, 10)",
-     "PowerShell: irm https://claude.ai/install.ps1 | iex   then open a NEW terminal"),
-    ("git", "Git (version history, GitHub)", "Install Git for Windows: https://git-scm.com"),
-    ("uv", "uv (fast Python package manager)", "PowerShell: winget install astral-sh.uv"),
-    ("adk", "Google ADK command (lesson 09)", "Run: uv pip install google-adk"),
-    ("node", "Node.js (optional: MCP Inspector)", "Optional: winget install OpenJS.NodeJS.LTS"),
+     "PowerShell: irm https://claude.ai/install.ps1 | iex   then open a NEW terminal",
+     "Terminal: curl -fsSL https://claude.ai/install.sh | bash   then open a NEW terminal"),
+    ("git", "Git (version history, GitHub)", "Install Git for Windows: https://git-scm.com",
+     "Terminal: xcode-select --install"),
+    ("uv", "uv (fast Python package manager)", "PowerShell: winget install astral-sh.uv",
+     "Optional: brew install uv   (python3 -m venv works too)"),
+    ("adk", "Google ADK command (lesson 09)", "Run: uv pip install google-adk",
+     "Run: .venv/bin/python -m pip install google-adk"),
+    ("node", "Node.js (optional: MCP Inspector)", "Optional: winget install OpenJS.NodeJS.LTS",
+     "Optional: brew install node"),
 ]:
-    path = shutil.which(command)
+    fix = mac_fix if ON_MAC else win_fix
+    path = shutil.which(command) or shutil.which(command, path=str(VENV_BIN))
     report(OK if path else (WARN if command in ("node", "uv") else BAD),
            f"{why}" + ("" if path else " - not found"), "" if path else fix)
 

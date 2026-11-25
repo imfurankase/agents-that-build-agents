@@ -7,18 +7,15 @@
       "Bash(.venv/Scripts/python.exe run.py *)",
       "Bash(.venv/Scripts/python.exe scripts/check_setup.py*)",
       "Bash(.venv/Scripts/python.exe -m pytest*)",
+      "Bash(.venv/bin/python run.py *)",
+      "Bash(.venv/bin/python scripts/check_setup.py*)",
+      "Bash(.venv/bin/python -m pytest*)",
       "Bash(git status*)",
       "Bash(git diff*)",
       "Bash(git log*)"
     ],
-    "ask": [
-      "Bash(git push*)",
-      "Bash(git commit*)"
-    ],
-    "deny": [
-      "Read(./.env)",
-      "Edit(./.env)"
-    ]
+    "ask": ["Bash(git push*)", "Bash(git commit*)"],
+    "deny": ["Read(./.env)", "Edit(./.env)"]
   },
   "hooks": {
     "PreToolUse": [
@@ -27,7 +24,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard.py\"",
+            "command": "if python3 -c '' >/dev/null 2>&1; then exec python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard.py\"; else exec python \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard.py\"; fi",
             "timeout": 15
           }
         ]
@@ -37,7 +34,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/audit_log.py\"",
+            "command": "if python3 -c '' >/dev/null 2>&1; then exec python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/audit_log.py\"; else exec python \"$CLAUDE_PROJECT_DIR/.claude/hooks/audit_log.py\"; fi",
             "timeout": 15
           }
         ]
