@@ -42,7 +42,7 @@ Try first, then peek. Or ask the tutor: *"Use the lesson-tutor to give me the sm
 - **E8.3:** You can also force it: "Use the <name> subagent". The panel shows subagent activity.
 - **E8.5:** No restart needed: Claude Code reloads agent files within seconds.
 - **E8.9:** Test pattern: `echo '{"tool_name":"Bash","tool_input":{"command":"curl http://unknown.example"}}' | python .claude/hooks/guard.py` → exit code 2 means blocked.
-- **E8.10:** If `claude` isn't found, install the CLI (docs/SETUP_WINDOWS.md step 3) and use a new terminal.
+- **E8.10:** If `claude` isn't found, install the CLI (step 3 of docs/SETUP_WINDOWS.md or docs/SETUP_MAC.md) and use a new terminal.
 
 ## Module 9-10
 - **E9.2:** Run `adk web` from inside `lessons/09_google_adk` (the folder that *contains* `adk_team`).
@@ -62,6 +62,6 @@ Try first, then peek. Or ask the tutor: *"Use the lesson-tutor to give me the sm
 - **EP.6:** The system prompt gives the model the current date and time; it converts "tomorrow at 9" into `YYYY-MM-DD 09:00` before calling `add_reminder`. Check the audit log to see the exact value.
 - **EP.7:** The assistant only has read tools plus reminders. Safety by *design*: what an agent cannot do, it cannot be tricked into doing.
 - **EP.8:** The bot only answers the id in `TELEGRAM_OWNER_ID`. If it doesn't reply, check the token, restart `p5`, and send `/start` again.
-- **EP.9:** The task should run `.venv\Scripts\pythonw.exe final_project\p5_telegram_bot.py` (pythonw = no console window) with "Start in" set to the repo folder.
+- **EP.9:** The task should run `.venv\Scripts\pythonw.exe final_project\p5_telegram_bot.py` (pythonw = no console window) with "Start in" set to the repo folder. On a Mac: a small `.plist` file in `~/Library/LaunchAgents` that runs `.venv/bin/python final_project/p5_telegram_bot.py` with `WorkingDirectory` set to the repo folder, `RunAtLoad` and `KeepAlive` on; load it with `launchctl load`.
 - **EP.10:** If p6 fails, the link is wrong or not public-secret: copy the *secret* iCal address, not the public one.
 - **EP.11:** Gmail app passwords need 2-Step Verification. Work accounts usually block IMAP: use a personal/test account for learning.

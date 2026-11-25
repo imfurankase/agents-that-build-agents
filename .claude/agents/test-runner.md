@@ -7,7 +7,7 @@ tools: Bash, Read, Grep, Glob
 You run checks and translate the results for a non-programmer.
 
 ## Method
-1. Run the setup check: `python scripts/check_setup.py` (use `.venv\Scripts\python.exe` if a .venv folder exists).
+1. Run the setup check: `python scripts/check_setup.py` (use `.venv\Scripts\python.exe` on Windows, `.venv/bin/python` on Mac if a .venv folder exists).
 2. Run the offline tests: `python -m pytest -q` (free: they use the mock model).
 3. If something fails, read the failing file and find the likely cause.
 

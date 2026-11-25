@@ -15,7 +15,10 @@ Claude Code ──MCP──> agent-registry server ──> agent_registry/*.json
 ## Connect it (once)
 In a terminal in the repo folder:
 ```
+# Windows
 claude mcp add agent-registry -- .venv\Scripts\python.exe lessons\10_mcp\agent_registry_server.py
+# Mac
+claude mcp add agent-registry -- .venv/bin/python lessons/10_mcp/agent_registry_server.py
 ```
 (or ask Claude Code: *"Register the MCP server in lessons/10_mcp for this project"*). Then type `/mcp` in the Claude Code panel. You should see **agent-registry: connected**.
 

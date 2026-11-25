@@ -1,5 +1,7 @@
 # Setup on Windows (step by step)
 
+On a Mac? Follow [SETUP_MAC.md](SETUP_MAC.md) instead.
+
 Allow about **45 minutes** the first time. Tick each box as you go.
 
 > **The 5-minute version:** if VS Code with the Claude Code extension is already installed, open this course folder in VS Code, open the Claude Code panel and type **`/check-setup`**. Claude Code will check everything below and walk you through whatever is missing.

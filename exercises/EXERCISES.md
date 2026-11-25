@@ -145,7 +145,7 @@ Follow [final_project/README.md](../final_project/README.md). Work in order; eac
 **EP.6 🟡 Chat and reminders.** In p4, set three reminders in natural language ("in 10 minutes", "tomorrow at 9", "Friday 4pm"). *Done when:* `workspace/assistant/reminders.json` has the right three times.
 **EP.7 🟢 Refusal test.** In p4, ask it to forward, delete or reply to an email. *Done when:* it refuses and offers a draft, and you can explain why it *can't* (no such tools).
 **EP.8 🟡 On your phone.** Complete milestone 5 (BotFather, token, owner id). *Done when:* `/brief` works on your phone and a 2-minute reminder buzzes.
-**EP.9 🟡 Keep it running.** Ask Claude Code to set up a Windows Task Scheduler task that starts the bot at log-in. *Done when:* the bot works after a restart without you starting it.
+**EP.9 🟡 Keep it running.** Ask Claude Code to set up a Windows Task Scheduler task (on a Mac: a launchd agent) that starts the bot at log-in. *Done when:* the bot works after a restart without you starting it.
 **EP.10 🟡 Real calendar.** Add your calendar's secret iCal link to `.env`; run p6, then p2. *Done when:* p6 shows ✅ for the calendar and the briefing uses your real events.
 **EP.11 🔴 Real email (personal account).** Set up read-only IMAP with an app password for a personal or test account; run p6. *Done when:* p6 shows ✅ for email and the inbox stays unread.
 **EP.12 🔴 Extend it.** Add one feature from "Ideas to extend" (e.g. a Friday weekly review, or meeting-prep messages 30 minutes before each meeting), with a test and a safety review (`/review-agent`). *Done when:* it runs on your phone and you can explain its controls.

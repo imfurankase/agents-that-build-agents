@@ -12,9 +12,9 @@ Or type `/check-setup` to re-check everything.
 | # | Problem (what you see) | Likely cause | Fix |
 |---|---|---|---|
 | 1 | `claude : The term 'claude' is not recognized` | CLI not installed, or terminal opened before installing | Install: `irm https://claude.ai/install.ps1 \| iex`, then **open a new terminal**. The VS Code extension alone does not add `claude` to PATH. |
-| 2 | `python is not recognized` / Microsoft Store opens | Python not installed or not on PATH | Reinstall Python 3.12 and tick **Add python.exe to PATH**; or use `.venv\Scripts\python.exe` directly. |
+| 2 | `python is not recognized` / Microsoft Store opens · Mac: `command not found: python` | Python not installed or not on PATH · on a Mac, macOS only has `python3` | Reinstall Python 3.12 and tick **Add python.exe to PATH**; or use `.venv\Scripts\python.exe` directly. Mac: use `.venv/bin/python`, or run `source .venv/bin/activate` first. |
 | 3 | `uv is not recognized` | uv not installed / new terminal needed | `winget install astral-sh.uv`, open a new terminal. Or use `python -m pip install -r requirements.txt`. |
-| 4 | `ModuleNotFoundError: No module named 'google'` (or `anthropic`, `rich`…) | Packages not installed, or wrong Python used | `uv pip install -r requirements.txt`, and run with `.venv\Scripts\python.exe`. In VS Code pick the `.venv` interpreter (bottom right). |
+| 4 | `ModuleNotFoundError: No module named 'google'` (or `anthropic`, `rich`…) | Packages not installed, or wrong Python used | `uv pip install -r requirements.txt`, and run with `.venv\Scripts\python.exe` (Mac: `.venv/bin/python`). In VS Code pick the `.venv` interpreter (bottom right). |
 | 5 | "Hook error" messages in Claude Code after every action | `python` not on PATH for hooks, or Git Bash missing | Install Git for Windows and make sure `python --version` works in a new terminal. If needed ask Claude Code: *"Temporarily disable the hooks in .claude/settings.json"*. |
 | 6 | Everything says "BLOCKED… kill switch is ON" | A file named `STOP` exists in the repo root | Delete `STOP` yourself in the VS Code Explorer (only a human should). |
 | 7 | `Offline practice mode (mock model): answers are fake` | No API key found, so the course uses the free mock | Add `GOOGLE_API_KEY=` to `.env` (Setup step 8), or set `LLM_PROVIDER=gemini`. |
@@ -32,7 +32,7 @@ Or type `/check-setup` to re-check everything.
 | 19 | `stopped: budget` | The run reached `MAX_USD_PER_RUN` | Raise `MAX_USD_PER_RUN` in `.env` carefully, or use cheaper worker models / mock mode. |
 | 20 | `adk web` shows no agents / "no root_agent" | Started from the wrong folder | `cd lessons/09_google_adk` first, then `adk web`; pick **adk_team** top-left. |
 | 21 | `adk` is not recognized | ADK not installed in the active environment | `uv pip install google-adk`; run `.venv\Scripts\adk.exe web` or activate the venv. |
-| 22 | `/mcp` shows **agent-registry** failed/disconnected | Wrong Python path, or the server crashed | Re-add: `claude mcp add agent-registry -- .venv\Scripts\python.exe lessons\10_mcp\agent_registry_server.py` from the repo folder; test it alone with `python lessons/10_mcp/agent_registry_server.py` (it should wait silently; Ctrl+C to exit). |
+| 22 | `/mcp` shows **agent-registry** failed/disconnected | Wrong Python path, or the server crashed | Re-add: `claude mcp add agent-registry -- .venv\Scripts\python.exe lessons\10_mcp\agent_registry_server.py` (Mac: `... -- .venv/bin/python lessons/10_mcp/agent_registry_server.py`) from the repo folder; test it alone with `python lessons/10_mcp/agent_registry_server.py` (it should wait silently; Ctrl+C to exit). |
 | 23 | MCP server worked, then broke after an edit | Something `print()`s to stdout | MCP servers must never print to stdout; log to stderr or a file instead. |
 | 24 | `UnicodeEncodeError` / strange symbols in the console | Old Windows console encoding | Use Windows Terminal or VS Code's terminal; or run `chcp 65001` first. |
 | 25 | Agent SDK (lesson 08b): "ANTHROPIC_API_KEY is not set" | The SDK requires an API key | Add a key, or use `cli_agent_factory.py` (subscription) instead. |
@@ -40,7 +40,7 @@ Or type `/check-setup` to re-check everything.
 | 27 | New subagent isn't used | Vague `description`, or file not in `.claude/agents/` | Name it explicitly: *"Use the X agent to…"*; improve its description with trigger words. Files are reloaded within seconds. |
 | 28 | Claude Code "usage limit reached" | Plan usage window used up (big multi-agent runs use more) | Check `/usage`; wait for the window to reset; run smaller teams. |
 | 29 | `git clone` asks for a password | Private repo or no GitHub login | The course repo is public; check the URL. For your own private repos sign in with GitHub Desktop or `gh auth login`. |
-| 30 | VS Code doesn't find the `.venv` interpreter | Interpreter not selected | Command Palette → **Python: Select Interpreter** → `.venv\Scripts\python.exe`. |
+| 30 | VS Code doesn't find the `.venv` interpreter | Interpreter not selected | Command Palette → **Python: Select Interpreter** → `.venv\Scripts\python.exe` (Mac: `.venv/bin/python`). |
 
 ---
 

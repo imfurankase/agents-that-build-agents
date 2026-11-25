@@ -19,7 +19,7 @@
 **Goals:** a working setup; understand what a model call is; write a strong 6-part prompt.
 
 **Session 1: Setup (60-90 min)**
-- Follow [SETUP_WINDOWS.md](SETUP_WINDOWS.md), then in Claude Code: `/check-setup`
+- Follow [SETUP_WINDOWS.md](SETUP_WINDOWS.md) (Windows) or [SETUP_MAC.md](SETUP_MAC.md) (Mac), then in Claude Code: `/check-setup`
 - `/run-lesson 4c`: see an agent run (mock mode is fine).
 - Prompt: *"Give me a 5-minute tour of this repository: what is in each top-level folder?"*
 - Exercises: E0.1-E0.4

@@ -84,7 +84,9 @@ They live in `common/free_apis.py` and are in the shared toolbox, so **any agent
 ### Keep it running
 The bot works while `p5` is running. Options, from simplest:
 1. **Leave your computer on** with `p5` running in a terminal.
-2. **Start it automatically** when you log in: *"Set up a Windows Task Scheduler task that starts the Telegram bot when I log in, using the .venv Python. Explain each step."*
+2. **Start it automatically** when you log in:
+   - Windows: *"Set up a Windows Task Scheduler task that starts the Telegram bot when I log in, using the .venv Python. Explain each step."*
+   - Mac: *"Set up a launchd agent in ~/Library/LaunchAgents that starts the Telegram bot when I log in, using .venv/bin/python, and restarts it if it stops. Explain each step."* The bot pauses while the Mac sleeps; to keep it awake when plugged in: System Settings → Battery → Options → *Prevent automatic sleeping when the display is off*.
 3. **A small always-on machine** later (a Raspberry Pi or a small cloud server). Ask Claude Code to walk you through it when you're ready.
 
 ## Milestone 6: Your real calendar and email

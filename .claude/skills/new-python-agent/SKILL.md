@@ -11,7 +11,7 @@ disable-model-invocation: true
 
 1. Run the Architect lesson, which designs, validates and saves the spec:
    `python lessons/06_agents_that_build_agents/a_architect.py "$ARGUMENTS" --yes`
-   (use `.venv\Scripts\python.exe` if a .venv folder exists)
+   (use `.venv\Scripts\python.exe` on Windows, `.venv/bin/python` on Mac if a .venv folder exists)
 2. Open the new file in `agent_registry/` and explain it to the user in plain English: role, tools (and why), max_turns.
 3. Ask the `safety-reviewer` subagent to review the JSON file. Report the rating.
 4. Suggest one test command, e.g.

@@ -15,7 +15,7 @@ Written for a leader with limited coding experience. You will mostly **talk to C
 
 ## Start here (30 minutes)
 
-1. **Set up your computer:** follow [docs/SETUP_WINDOWS.md](docs/SETUP_WINDOWS.md). In short: VS Code + Claude Code extension, Python, Git, the Claude Code CLI, and a free Google AI Studio key.
+1. **Set up your computer:** follow [docs/SETUP_WINDOWS.md](docs/SETUP_WINDOWS.md) on Windows or [docs/SETUP_MAC.md](docs/SETUP_MAC.md) on a Mac. In short: VS Code + Claude Code extension, Python, Git, the Claude Code CLI, and a free Google AI Studio key.
 2. **Open this folder in VS Code**, open the Claude Code panel and type:
    > `/check-setup`
 3. **Run your first agent** (free, offline):
@@ -84,9 +84,9 @@ Built-in subagents in [.claude/agents/](.claude/agents/): `agent-architect`, `sa
 
 - **[docs/Agents_That_Build_Agents_Workbook.pdf](docs/Agents_That_Build_Agents_Workbook.pdf): the Field Guide & Workbook (105 pages).** Module recaps, the final project, all 99 exercises + 12 project tasks with checkboxes, cheat sheets, the prompt library, glossary and a progress tracker. Print it and keep it next to you.
 - [prompts/PROMPTING_GUIDE.md](prompts/PROMPTING_GUIDE.md): how to write prompts for models, agents and Claude Code
-- [prompts/PROMPT_LIBRARY.md](prompts/PROMPT_LIBRARY.md): 100+ copy-paste prompts, by lesson
-- [exercises/EXERCISES.md](exercises/EXERCISES.md): 80+ exercises in three levels; hints in [exercises/HINTS.md](exercises/HINTS.md)
-- [docs/LEARNING_PLAN.md](docs/LEARNING_PLAN.md): a 6-week plan, 3-4 hours a week
+- [prompts/PROMPT_LIBRARY.md](prompts/PROMPT_LIBRARY.md): 120 copy-paste prompts, by lesson
+- [exercises/EXERCISES.md](exercises/EXERCISES.md): 99 exercises in three levels plus 12 final-project tasks; hints in [exercises/HINTS.md](exercises/HINTS.md)
+- [docs/LEARNING_PLAN.md](docs/LEARNING_PLAN.md): a 9-week plan (6 weeks of lessons + 3 for the final project), 3-4 hours a week
 - [docs/TOOLS.md](docs/TOOLS.md): the recommended toolkit and why
 - [docs/CLAUDE_CODE_GUIDE.md](docs/CLAUDE_CODE_GUIDE.md): Claude Code for agent builders
 - [docs/AI_STUDIO_GUIDE.md](docs/AI_STUDIO_GUIDE.md): Google AI Studio, no code

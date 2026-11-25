@@ -113,6 +113,7 @@ Hooks are commands that run automatically at moments like **before a tool call**
 - In the panel: **`/mcp`** to see, add, enable or reconnect servers.
 - In a terminal: `claude mcp add <name> -- <command> <args>`, for example
   `claude mcp add agent-registry -- .venv\Scripts\python.exe lessons\10_mcp\agent_registry_server.py`
+  (on a Mac: `claude mcp add agent-registry -- .venv/bin/python lessons/10_mcp/agent_registry_server.py`)
 - **Scopes:** `local` (default: just you, this project), `project` (writes `.mcp.json`, shared via git), `user` (all your projects): `--scope project`.
 - `.mcp.json` example: see `.mcp.json.example` in the repo root.
 - Only add servers from sources you trust. They run on your machine.
